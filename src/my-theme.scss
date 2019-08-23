@@ -1,10 +1,54 @@
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
 
+/* roboto-300 - latin_latin-ext */
+// @font-face {
+//     font-family: 'Roboto';
+//     font-style: normal;
+//     font-weight: 300;
+//     src: url('assets/fonts/roboto-v18-latin_latin-ext-300.eot'); /* IE9 Compat Modes */
+//     src: local('Roboto Light'), local('Roboto-Light'),
+//       url('assets/fonts/roboto-v18-latin_latin-ext-300.eot?#iefix') format('embedded-opentype'),
+//       /* IE6-IE8 */ url('assets/fonts/roboto-v18-latin_latin-ext-300.woff2') format('woff2'),
+//       /* Super Modern Browsers */ url('assets/fonts/roboto-v18-latin_latin-ext-300.woff') format('woff'),
+//       /* Modern Browsers */ url('assets/fonts/roboto-v18-latin_latin-ext-300.ttf') format('truetype'),
+//       /* Safari, Android, iOS */ url('assets/fonts/roboto-v18-latin_latin-ext-300.svg#Roboto') format('svg'); /* Legacy iOS */
+//   }
+//   /* roboto-regular - latin_latin-ext */
+//   @font-face {
+//     font-family: 'Roboto';
+//     font-style: normal;
+//     font-weight: 400;
+//     src: url('assets/fonts/roboto-v18-latin_latin-ext-regular.eot'); /* IE9 Compat Modes */
+//     src: local('Roboto'), local('Roboto-Regular'),
+//       url('assets/fonts/roboto-v18-latin_latin-ext-regular.eot?#iefix') format('embedded-opentype'),
+//       /* IE6-IE8 */ url('assets/fonts/roboto-v18-latin_latin-ext-regular.woff2') format('woff2'),
+//       /* Super Modern Browsers */ url('assets/fonts/roboto-v18-latin_latin-ext-regular.woff') format('woff'),
+//       /* Modern Browsers */ url('assets/fonts/roboto-v18-latin_latin-ext-regular.ttf') format('truetype'),
+//       /* Safari, Android, iOS */ url('assets/fonts/roboto-v18-latin_latin-ext-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+//   }
+//   /* roboto-700 - latin_latin-ext */
+//   @font-face {
+//     font-family: 'Roboto';
+//     font-style: normal;
+//     font-weight: 700;
+//     src: url('assets/fonts/roboto-v18-latin_latin-ext-700.eot'); /* IE9 Compat Modes */
+//     src: local('Roboto Bold'), local('Roboto-Bold'), url('assets/fonts/roboto-v18-latin_latin-ext-700.eot?#iefix') format('embedded-opentype'),
+//       /* IE6-IE8 */ url('assets/fonts/roboto-v18-latin_latin-ext-700.woff2') format('woff2'),
+//       /* Super Modern Browsers */ url('assets/fonts/roboto-v18-latin_latin-ext-700.woff') format('woff'),
+//       /* Modern Browsers */ url('assets/fonts/roboto-v18-latin_latin-ext-700.ttf') format('truetype'),
+//       /* Safari, Android, iOS */ url('assets/fonts/roboto-v18-latin_latin-ext-700.svg#Roboto') format('svg'); /* Legacy iOS */
+//   }
+  
+  // and custom font stuff
+  $cv-typography: mat-typography-config(
+    $font-family: '"Roboto", sans-serif'
+  );
+
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-@include mat-core();
+@include mat-core($cv-typography);
 
 
 // Define black mat color palette

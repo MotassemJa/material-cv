@@ -7,14 +7,19 @@ import { AppComponent } from './app.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
+    ToolbarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
