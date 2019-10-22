@@ -1,6 +1,7 @@
 import { Component, NgModule, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 @Component({
   selector: 'app-homepage',
@@ -16,7 +17,7 @@ export class Homepage implements OnInit {
 }
 
 @NgModule({
-  imports: [MatButtonModule, RouterModule],
+  imports: [MatButtonModule, RouterModule, FlexLayoutModule],
   exports: [Homepage],
   declarations: [Homepage],
 })
