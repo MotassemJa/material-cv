@@ -5,23 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 
-import {MatToolbarModule} from '@angular/material/toolbar';
-
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { ToolbarComponent } from './toolbar/toolbar.component';
+import { NavBarModule } from './shared/navbar';
+import { HomepageModule } from './pages/homepage';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToolbarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatToolbarModule,
     FlexLayoutModule,
+    NavBarModule,
+    HomepageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
