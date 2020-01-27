@@ -4,6 +4,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { HttpClientModule } from '@angular/common/http';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 
 
 @Component({
@@ -12,6 +15,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   styleUrls: ['./navbar.scss']
 })
 export class NavBar {
+
+  constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {
+    this.matIconRegistry.addSvgIcon(
+      `icon_github`,
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/img/github-circle-white-transparent.svg')
+    );
+  }
 }
 
 @NgModule({
@@ -20,7 +30,8 @@ export class NavBar {
     MatButtonModule,
     MatToolbarModule,
     RouterModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   exports: [NavBar],
   declarations: [NavBar],
